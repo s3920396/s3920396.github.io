@@ -31,5 +31,29 @@ h3 {
   width: 100%;
   height: 5rem;
   margin: 1rem 0;
-  gap: 1rem;
+  gap: 1rem 0;
+}
+.gridBox {
+  background-color: red;
+}
+#boxItem1 {
+  background-color: green;
+}
+#boxItem2 {
+  background-color: green;
+}
+#boxItem3 {
+  background-color: green;
+}
+#boxItem4 {
+  background-color: green;
+}
+#boxItem5 {
+  background-color: green;
+}
+#boxItem6 {
+  background-color: green;
+}
+#boxItem7 {
+  background-color: green;
 }
