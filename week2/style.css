@@ -17,6 +17,7 @@ h3 {
   font-size: 1.25rem;
 }
 #info-para {
-  width: 50%;
+  padding: 1rem;
   margin: 0 auto;
+  border: 1rem solid red;
 }
