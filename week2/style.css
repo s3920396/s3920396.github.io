@@ -21,3 +21,9 @@ h3 {
   margin: 0 auto;
   border: 1rem solid red;
 }
+
+.navLinkBox {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
