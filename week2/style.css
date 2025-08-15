@@ -40,11 +40,11 @@ h3 {
   width: 20rem;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: 1fr 1fr 1fr;
-  align-items: stretch;
 }
 
 #boxItem1 {
   background-color: green;
+  width: fit-content;
 }
 #boxItem2 {
   background-color: green;
