@@ -34,13 +34,15 @@ h3 {
   gap: 1rem 0;
 }
 .gridBox {
+  background-color: red;
   display: grid;
   height: 20rem;
-  width: 40rem;
-  grid-template-columns: 1fr 1fr 1fr;
+  width: 20rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  background-color: red;
+  align-items: stretch;
 }
+
 #boxItem1 {
   background-color: green;
 }
