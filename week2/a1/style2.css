@@ -15,3 +15,8 @@ h2 {
 h3 {
   font-size: 1.25rem;
 }
+#info-ul {
+  padding: 1rem;
+  margin: 0 auto;
+  border: 1rem solid red;
+}
