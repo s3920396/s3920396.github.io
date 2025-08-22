@@ -14,3 +14,8 @@ function addToCartTotal(item) {
   console.log("running total:", total);
 }
 shoppingcart.forEach(addToCartTotal);
+
+if (cartTotal > 100) {
+  cartTotal = cartTotal * 0.9;
+}
+console.log("Your cart total is :", cartTotal);

@@ -75,3 +75,5 @@ console.log(myPets);
 function tellMeHowHungryIAm() {
   console.log("I'm not sure");
 }
+
+console.log(hiddenvariable);
