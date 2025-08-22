@@ -32,6 +32,11 @@ if (myAge < 30) {
   documentBody.style.backgroundColor = "blue";
 }
 
+//for loop
+for (let steps = 0; steps < 5; steps++) {
+  console.log("Steps taken:", steps);
+}
+
 const a = 10;
 let b = "10";
 let setToBlue = false;
