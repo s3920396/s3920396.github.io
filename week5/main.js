@@ -1,4 +1,8 @@
 //variables
+//find an element
+const documentBody = document.querySelector("body");
+console.groupCollapsed(documentBody);
+
 const myName = "Patrick";
 let myHungriness = 0.3;
 console.log(myHungriness);
@@ -21,6 +25,13 @@ console.log(quote);
 let nameString = `My full name is ${firstName} ${surname}`;
 console.log(nameString);
 
+//conditionals
+if (myAge < 30) {
+  documentBody.style.backgroundColor = "red";
+} else {
+  documentBody.style.backgroundColor = "blue";
+}
+
 //type conversion
 let myAge = 37;
 let timePass = "5";
@@ -34,6 +45,7 @@ console.log(hiddenvariable);
 let myPets = ["spot", "joey", "charile", "loius"];
 
 console.log(myPets);
+
 //function
 function tellMeHowHungryIAm() {
   console.log("I'm not sure");
