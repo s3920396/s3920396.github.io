@@ -27,6 +27,13 @@ let timePass = "5";
 let updatedAge = myAge + parseInt;
 console.log(updatedAge);
 
+let hiddenvariable = "?";
+console.log(hiddenvariable);
+
+//array
+let myPets = ["spot", "joey", "charile", "loius"];
+
+console.log(myPets);
 //function
 function tellMeHowHungryIAm() {
   console.log("I'm not sure");
