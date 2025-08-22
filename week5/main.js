@@ -32,6 +32,14 @@ if (myAge < 30) {
   documentBody.style.backgroundColor = "blue";
 }
 
+const a = 10;
+let b = "10";
+if (a !== b) {
+  documentBody.style.backgroundColor = "red";
+} else {
+  documentBody.style.backgroundColor = "blue";
+}
+
 //type conversion
 let myAge = 37;
 let timePass = "5";
