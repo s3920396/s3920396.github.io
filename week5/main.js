@@ -34,7 +34,8 @@ if (myAge < 30) {
 
 const a = 10;
 let b = "10";
-if (a !== b) {
+let setToBlue = false;
+if (!setToBlue) {
   documentBody.style.backgroundColor = "red";
 } else {
   documentBody.style.backgroundColor = "blue";
