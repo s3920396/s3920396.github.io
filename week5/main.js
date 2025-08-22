@@ -11,7 +11,13 @@ console.log("hello");
 let stepNumber = 4;
 console.log("Taking step:", stepNumber, "... i think");
 
-let name = prompt("What's your name?");
+//let name = prompt("What's your name?");
+
+// strings
+let firstName = "Patrick";
+let surname = "McMahon";
+let quote = "This is a 'quote'";
+console.log(quote);
 
 //function
 function tellMeHowHungryIAm() {
