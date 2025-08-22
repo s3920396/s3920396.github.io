@@ -37,6 +37,15 @@ for (let steps = 0; steps < 5; steps++) {
   console.log("Steps taken:", steps);
 }
 
+// for each
+const numbers = [12, 14, 8, 6];
+let total = 0;
+numbers.forEach(totalNumbers);
+
+function totalNumbers(item) {
+  total = total + item;
+}
+
 const a = 10;
 let b = "10";
 let setToBlue = false;
