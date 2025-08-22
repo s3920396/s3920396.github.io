@@ -40,11 +40,13 @@ for (let steps = 0; steps < 5; steps++) {
 // for each
 const numbers = [12, 14, 8, 6];
 let total = 0;
-numbers.forEach(totalNumbers);
 
 function totalNumbers(item) {
   total = total + item;
+  console.log("item price", item, "running total", total);
 }
+numbers.forEach(totalNumbers);
+console.log("final total", total);
 
 const a = 10;
 let b = "10";
