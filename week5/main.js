@@ -18,6 +18,13 @@ let firstName = "Patrick";
 let surname = "McMahon";
 let quote = "This is a 'quote'";
 console.log(quote);
+let nameString = `My full name is ${firstName} ${surname}`;
+console.log(nameString);
+
+//type conversion
+let myAge = 37;
+let timePass = "5";
+let updatedAge = myAge + parseInt;
 
 //function
 function tellMeHowHungryIAm() {
