@@ -25,6 +25,7 @@ console.log(nameString);
 let myAge = 37;
 let timePass = "5";
 let updatedAge = myAge + parseInt;
+console.log(updatedAge);
 
 //function
 function tellMeHowHungryIAm() {
