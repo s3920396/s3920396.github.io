@@ -10,4 +10,18 @@ let windowWidth = window.innerWidth;
 // can find the body
 //document.body.style.backgroundColor = "red";
 // use a navigator code to fid more software
-console.log(window.navigator.userAgent);
+//console.log(window.navigator.userAgent);
+
+const myImage = document.querySelector("#myImage");
+console.log(myImage);
+const firstParagraph = document.querySelector(".inner");
+
+const myParagraphs = document.querySelectorAll("p");
+function changeParaBG(item) {
+  console.log(item);
+  item.style.backgroundColor = "red";
+}
+
+//first find content of hello p
+console.log(helloParagraph.textContent);
+helloParagraph.textContent = "whatever I want";
