@@ -24,4 +24,4 @@ function changeParaBG(item) {
 
 //first find content of hello p
 console.log(helloParagraph.textContent);
-helloParagraph.textContent = "whatever I want";
+helloParagraph.textContent = "Hi My name is ${myImage.dataset.catname}";
