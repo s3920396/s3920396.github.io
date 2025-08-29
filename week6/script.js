@@ -24,4 +24,21 @@ function changeParaBG(item) {
 
 //first find content of hello p
 console.log(helloParagraph.textContent);
-helloParagraph.textContent = "Hi My name is ${myImage.dataset.catname}";
+
+function updateCatName() {
+  helloParagraph.textContent = "Hi My name is ${myImage.dataset.catname}";
+
+  helloParagraph.t;
+}
+// find the outer section
+const outerSection = document.querySelector("outer");
+
+const myButton = document.querySelector("#myButton");
+
+// create element
+const newPara = document.createElement("p");
+newPara.textContent = "I am a new paragraph";
+newPara.classList.add("coral-box");
+document.body.appendChild(newPara);
+
+console.log(newPara);
