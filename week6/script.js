@@ -35,10 +35,29 @@ const outerSection = document.querySelector("outer");
 
 const myButton = document.querySelector("#myButton");
 
+// add a eventlistener to button
+myButton.addEventListener("click", function(){
+alert("button is clicked")
+)};
 // create element
 const newPara = document.createElement("p");
 newPara.textContent = "I am a new paragraph";
 newPara.classList.add("coral-box");
 document.body.appendChild(newPara);
 
+// at paragrpah in concole
 console.log(newPara);
+
+// add new element to header
+const myHeader = document.querySelector("header");
+//find my catname
+let catName = myImage.dataset.catname;
+myHeader.innrtHTML += "<h2>I think ${catName} is pretty cool</h2>";
+
+// += works for maths
+let x = 0;
+x = x + 2;
+x += 4;
+
+// add mouseente eventlistner to img
+myImage.addEventListener;
