@@ -1,4 +1,26 @@
 /* store custom variables*/
 :root {
-  --colour-01: red;
+  --colour-01: white;
+  --colour-02: black;
+  --colour-03: cornflowerblue;
+  --colour-04: coral;
+  --border: sold coral 2px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  line-height: 1.6;
+  background-color: var(--colour-03);
+  color: var(--colour-01);
+}
+h1 {
+  font-size: 2rem;
+}
+
+nav {
+  border: var(--border);
 }
