@@ -23,4 +23,32 @@ h1 {
 
 nav {
   border: var(--border);
+  padding: 1rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: var(--border);
+}
+
+main {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.mediaplayersection {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#mediaPlayer {
+  max-width: 100%;
+}
+
+.mediaPlayerContainer {
+  display: flex;
 }
