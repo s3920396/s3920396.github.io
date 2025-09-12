@@ -28,3 +28,6 @@ playerPauseButton.addEventListener("click", playPause);
 it should update as media playback occors and to current 
 I should be able to click and jump time
 */
+
+function updateTimeline() {}
+videoElement.addEventListener("timeupdate", updateTimeline);
