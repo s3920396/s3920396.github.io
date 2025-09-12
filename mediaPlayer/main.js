@@ -1,6 +1,9 @@
-const videoElement = document.querySelector("#mediaPlayer")
-const playerPauseButton = document.querySelector("#playPauseButton")
-const
+const videoElement = document.querySelector("#mediaPlayer");
+const playerPauseButton = document.querySelector("#playPauseButton");
+const timeline = document.querySelector("#timelineProgress");
+
+/* when JS loads remove default controls */
+videoElement.removeAttribute("controls");
 
 /* play pause button behaviour: If media is not playing
 if media is playing
@@ -9,6 +12,15 @@ feedback
 toggle icon based on play state
 cursor change on hover
 */
+
+function playPause() {
+  if (videoElement.paused || videoElement.ended) {
+    videoElement.plaY();
+  } else {
+    videoElement.pause();
+  }
+}
+playerPauseButton.addEventListener("click", playPause);
 
 /* time line behaviour
 it should update as media playback occors and to current 
