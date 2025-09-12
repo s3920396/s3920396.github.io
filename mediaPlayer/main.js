@@ -29,5 +29,9 @@ it should update as media playback occors and to current
 I should be able to click and jump time
 */
 
-function updateTimeline() {}
+function updateTimeline() {
+  // findpercentage of total time
+  let timepercent = videoElement.currentTime(videoElement.duration);
+  //timeline.value = 0;
+}
 videoElement.addEventListener("timeupdate", updateTimeline);
