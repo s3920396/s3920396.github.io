@@ -16,8 +16,10 @@ cursor change on hover
 function playPause() {
   if (videoElement.paused || videoElement.ended) {
     videoElement.plaY();
+    playerPauseButton.textContent = "⏸";
   } else {
     videoElement.pause();
+    playerPauseButton.textContent = "▶";
   }
 }
 playerPauseButton.addEventListener("click", playPause);
