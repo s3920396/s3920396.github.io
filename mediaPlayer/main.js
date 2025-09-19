@@ -5,6 +5,20 @@ const timeline = document.querySelector("#timelineProgress");
 /* when JS loads remove default controls */
 videoElement.removeAttribute("controls");
 
+videoElement.addEventListener ("canplay", updateTotalTime);
+
+function updateTimeline(){
+ let videoSeconds = videoElement.duration;
+  let totalMin =Math.floor(videoSeconds/ 60);
+let totalAwx = videoSeconds % 60;
+if(totalSec < 10) {
+  totalSec = "0" + totalSec;
+}
+currentTimeTextContent = 
+}
+
+
+
 /* play pause button behaviour: If media is not playing
 if media is playing
 When I click it begins and pauses the playback of the media file 
