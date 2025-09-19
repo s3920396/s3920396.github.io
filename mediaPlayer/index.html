@@ -3,36 +3,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
 
     <title>Audio visual player</title>
   </head>
-  <h1>my media player</h1>
-  <body></body>
+  <body>
+    <!--this is my header-->
+    <header><h1>Media player</h1></header>
+  </body>
 </html>
-
+<!--the nav bar-->
 <nav>
   <a>Home</a>
   <a>Media Player</a>
   <a>About</a>
   <a>Contact</a>
 </nav>
-
+<!-- the main section-->
 <main>
+  <!--main media player-->
   <section class="mediaPlayerSection"></section>
-  <video id="mediaPlayer" controls>
+  <video id="mediaPlayer" controls autoplay muted="true">
     <source
+      id="mediaSource"
       src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
-      type="video"
-      This
-      browser
-      does
-      not
-      support
-      this
-      video
+      type="video/mp4"
     />
+    This browser does not support this video element. />
   </video>
 
   <div class="mediaPlayerControlContainer">
