@@ -41,7 +41,7 @@ function playPause() {
     playPauseIcon.alt = "pause icon";
   } else {
     videoElement.pause();
-    playPauseIcon.src = "./assets/plsy-icon.png";
+    playPauseIcon.src = "./assets/play-icon.png";
     playPauseIcon.alt = "play icon";
   }
 }
