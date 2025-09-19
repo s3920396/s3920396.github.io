@@ -1,6 +1,11 @@
+/* fidn the interactive elements*/
 const videoElement = document.querySelector("#mediaPlayer");
-const playerPauseButton = document.querySelector("#playPauseButton");
+const playPauseButton = document.querySelector("#playPauseButton");
+const playPauseIcon = document.querySelector("#playPauseIcon");
 const timeline = document.querySelector("#timelineProgress");
+const currentTimeText = document.querySelector("#currentTimeFeedback");
+const totalTimeText = document.querySelector("#totalTimeFeedback");
+const mediaSource = document.querySelector("#mediaSource");
 
 /* when JS loads remove default controls */
 videoElement.removeAttribute("controls");
