@@ -47,3 +47,22 @@ function updateTimeline() {
   //timeline.value = 0;
 }
 videoElement.addEventListener("timeupdate", updateTimeline);
+
+//current time
+function updateTimeline() {
+  let videoSeconds = videoElement.duration;
+  let totalMin = Math.floor(videoSeconds / 60);
+  let totalAwx = videoSeconds % 60;
+  if (totalSec < 10) {
+    totalSec = "0" + totalSec;
+  }
+  TimeTextContent = "${totalMin}:{totalSec}";
+}
+
+// add different songs
+
+// based on number which of 4 songs to pick
+
+//play back
+
+//loop back to start of the array
