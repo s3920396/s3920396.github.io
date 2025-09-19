@@ -33,16 +33,22 @@
     />
     This browser does not support this video element. />
   </video>
-
+  <!--the media controlers-->
   <div class="mediaPlayerControlContainer">
     <button id="playerPauseButton">
       <img id="playPauseIcon" src=".assets/play-icon.png" alt="play icon" />
     </button>
     <progress id="timelineProgress" max="100" value="0"></progress>
-
-    <p></p>
+    <!--let the user know how long the video is and what the current time is-->
+    <p class="timeContainer">
+      <span id="curentTiemeFeedback">0:00</span>
+      /
+      <span id="timeTimeFeedback">4:30</span>
+    </p>
   </div>
 </main>
+
+<!-- the footer section-->
 
 ⏸ ▶
 <!--add in the rest of the code to get the video to work -->
