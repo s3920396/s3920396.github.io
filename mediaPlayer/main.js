@@ -5,19 +5,17 @@ const timeline = document.querySelector("#timelineProgress");
 /* when JS loads remove default controls */
 videoElement.removeAttribute("controls");
 
-videoElement.addEventListener ("canplay", updateTotalTime);
+videoElement.addEventListener("canplay", updateTotalTime);
 
-function updateTimeline(){
- let videoSeconds = videoElement.duration;
-  let totalMin =Math.floor(videoSeconds/ 60);
-let totalAwx = videoSeconds % 60;
-if(totalSec < 10) {
-  totalSec = "0" + totalSec;
+function updateTimeline() {
+  let videoSeconds = videoElement.duration;
+  let totalMin = Math.floor(videoSeconds / 60);
+  let totalAwx = videoSeconds % 60;
+  if (totalSec < 10) {
+    totalSec = "0" + totalSec;
+  }
+  TimeTextContent = "${totalMin}:{totalSec}";
 }
-currentTimeTextContent = 
-}
-
-
 
 /* play pause button behaviour: If media is not playing
 if media is playing
