@@ -22,10 +22,25 @@
 <main>
   <section class="mediaPlayerSection"></section>
   <video id="mediaPlayer" controls>
-    <source src="" type="video" This browser does not support this video />
+    <source
+      src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
+      type="video"
+      This
+      browser
+      does
+      not
+      support
+      this
+      video
+    />
   </video>
 
-  <div class="mediaPlayer"></div>
+  <div class="mediaPlayerControlContainer">
+    <button id="playerPauseButton">
+      <img id="playPauseIcon" src=".assets/play-icon.png" alt="play icon" />
+    </button>
+    <progress id="timelineProgress" max="100" value="0"></progress>
+  </div>
 </main>
 
 ⏸ ▶
