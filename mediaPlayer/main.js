@@ -37,10 +37,12 @@ cursor change on hover
 function playPause() {
   if (videoElement.paused || videoElement.ended) {
     videoElement.play();
-    playPauseIcon.src = "./assets/play";
+    playPauseIcon.src = "./assets/pause-icon.png";
+    playPauseIcon.alt = "pause icon";
   } else {
     videoElement.pause();
-    playerPauseButton.textContent = "▶";
+    playPauseIcon.src = "./assets/plsy-icon.png";
+    playPauseIcon.alt = "play icon";
   }
 }
 playerPauseButton.addEventListener("click", playPause);
@@ -52,22 +54,24 @@ I should be able to click and jump time
 
 function updateTimeline() {
   // findpercentage of total time
-  let timepercent = videoElement.currentTime(videoElement.duration);
-  //timeline.value = 0;
+  let timepercent = (videoElement.currentTime / videoElement.duration) * 100;
+  //console.log(timePercent);
+  timeline.value = timepercent;
+  updateCurentTime();
 }
-videoElement.addEventListener("timeupdate", updateTimeline);
 
 //current time
 function updateTimeline() {
   let videoSeconds = videoElement.duration;
   let totalMin = Math.floor(videoSeconds / 60);
-  let totalAwx = videoSeconds % 60;
+  let totalSec = Math.floor(videoSeconds % 60);
   if (totalSec < 10) {
     totalSec = "0" + totalSec;
   }
   TimeTextContent = "${totalMin}:{totalSec}";
 }
 
+videoElement.addEventListener("timeupdate", updateTimeline);
 // add different songs
 
 // based on number which of 4 songs to pick
