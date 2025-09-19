@@ -53,4 +53,14 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+#playerPauseButton {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+#timelineProgress {
+  flex: 1;
 }
