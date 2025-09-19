@@ -1,3 +1,7 @@
+/* THE A2 MAIN IDEA */
+/* work on making a play list with buttons */
+/* buttons to switch between songs with thumbanails*/
+
 /* fidn the interactive elements*/
 const videoElement = document.querySelector("#mediaPlayer");
 const playPauseButton = document.querySelector("#playPauseButton");
@@ -32,8 +36,8 @@ cursor change on hover
 
 function playPause() {
   if (videoElement.paused || videoElement.ended) {
-    videoElement.plaY();
-    playerPauseButton.textContent = "⏸";
+    videoElement.play();
+    playPauseIcon.src = "./assets/play";
   } else {
     videoElement.pause();
     playerPauseButton.textContent = "▶";
