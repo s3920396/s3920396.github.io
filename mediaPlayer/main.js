@@ -95,8 +95,8 @@ let currentSongNumber = 0;
 //song storage
 const songArray = [
 "https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4",
-"https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4",
-"https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
+"https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Hes.mp3",
+"https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Dry-Down-feat-Ben-Snaath.mp3"
 ];
 
 //play back
@@ -109,6 +109,18 @@ function updateCurrentSong(songNumber){
   videoElement.play();
 }
 
+videoElement.addEventListener("ended", playNextOnEnd);
+
+function playNextOnEnd(){
+  if(currentSongNumber < songArray.length - 1){
+    updateCurrentSong(currentSongNumber + 2);
+    currentSongNumber += 1;
+  } else {
+    // loop back to the start
+    updateCurrentSong(0);
+    currentSongNumber = 0;
+  }
+}
 
 
 
