@@ -138,13 +138,7 @@ function playNextOnEnd(){
 
 //the skip button
 
-document.getElementById("skipButton").addEventListener("click", [playNextOnEnd]);
-
-// play first song
-updateCurrentSong(currentSongNumber);
-
-// when current song ends play the next one
-videoElement.addEventListener("ended", playNextOnEnd);
+document.getElementById("skipButton").addEventListener("click", playNextOnEnd);
 
 
 
