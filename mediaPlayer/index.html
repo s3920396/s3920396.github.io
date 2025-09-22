@@ -22,22 +22,22 @@
   <a>About</a>
   <a>Contact</a>
 </nav>
+
 <!-- the main section-->
 <main>
   <!--main media player-->
-  <section class="mediaPlayerSection"></section>
+  <section class="mediaPlayerSection">
   <video id="mediaPlayer" controls autoplay muted="true">
     <source
       id="mediaSource"
       src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
-      type="video/mp4"
-    />
-    This browser does not support this video element. />
+      type="video/mp4">
+    This browser does not support this video element.
   </video>
   <!--the media controlers-->
   <div class="mediaPlayerControlContainer">
     <button id="playerPauseButton">
-      <img id="playPauseIcon" src=".assets/play-icon.png" alt="play icon" />
+      <img id="playPauseIcon" src=".assets/play-icon.png" alt="play icon">
     </button>
     <progress id="timelineProgress" max="100" value="0"></progress>
     <!--let the user know how long the video is and what the current time is-->
@@ -47,6 +47,7 @@
       <span id="totalTimeFeedback">4:30</span>
     </p>
   </div>
+  </section>
 </main>
 
 <!-- the footer section-->
