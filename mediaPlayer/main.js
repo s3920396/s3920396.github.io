@@ -61,8 +61,8 @@ function updateTimeline() {
 }
 
 //current time
-function updateTimeline() {
-  let videoSeconds = videoElement.duration;
+function updateCurrentTime() {
+  let videoSeconds = videoElement.currentTime;
   let totalMin = Math.floor(videoSeconds / 60);
   let totalSec = Math.floor(videoSeconds % 60);
   if (totalSec < 10) {
@@ -72,6 +72,21 @@ function updateTimeline() {
 }
 
 videoElement.addEventListener("timeupdate", updateTimeline);
+
+//when clicking on the timeline I will jump to it
+timeline.addEventListener("click, jumpToTime");
+
+function jumpToTime(ev){
+// find how far we licked
+let clickX = ev.offsetX;
+//find how wide my timeline is
+let timeLineWidth = timeline.offsetWidth;
+// find the ratio of click to width of the song
+let clickPercent = clickX / timeLineWidth;
+//update the current time of the image
+videoElement.currentTime = videoElement.duration * clickPercent;
+
+}
 // add different songs
 
 // based on number which of 4 songs to pick
