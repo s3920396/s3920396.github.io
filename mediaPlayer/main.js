@@ -122,36 +122,6 @@ function playNextOnEnd(){
   }
 }
 
-//show preview of next video
-<p id="nextSongPreview">Next up: </p>
-
-//referencing
-const videoElement = document.querySelector("video");
-const mediaSource = videoElement;
-const nextSongPreview = document.getElementById("nextSongPreview");
-
-//updating the song
-
-function updateCurrentSong(songNumber){
-  currentSongNumber = songNumber;
-  mediaSource.src = songArray[songNumber];
-  videoElement.load();
-  videoElement.play();
-
-//update the preview
-const nextIndex = (songNumber + 1) % songArray.length;
-const fileName = songArray[nextIndex].split("/").pop();
-nextSongPreview.textContent = `Next up: ${fileName}`;
-
-}
-
-//end
-videoElement.addEventListener("ended", playNextOnEnd);
-
-function playerPauseButton(){
-  const nextIndex = (currentSongNumber + 1) % songArray.length;
-  updateCurrentSong(nextIndex);
-}
 
 
 
