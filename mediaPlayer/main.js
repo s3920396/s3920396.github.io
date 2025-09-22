@@ -77,7 +77,7 @@ videoElement.addEventListener("timeupdate", updateTimeline);
 timeline.addEventListener("click", jumpToTime);
 
 function jumpToTime(ev){
-// find how far we licked
+// find how far we clicked
 let clickX = ev.offsetX;
 //find how wide my timeline is
 let timeLineWidth = timeline.offsetWidth;
@@ -87,10 +87,29 @@ let clickPercent = clickX / timeLineWidth;
 videoElement.currentTime = videoElement.duration * clickPercent;
 
 }
-// add different songs
+// play next song after perivous one ended
 
-// based on number which of 4 songs to pick
+// song listing
+let currentSongNumber = 0;
+
+//song storage
+const songArray = [
+"https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4",
+"https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4",
+"https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
+];
 
 //play back
+function updateCurrentSong(songNumber){
+  //input number
+  mediaSource.src = songArray[songNumber];
+  //new song load
+  videoElement.load();
+  //playback
+  videoElement.play();
+}
+
+
+
 
 //loop back to start of the array
