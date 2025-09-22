@@ -99,6 +99,13 @@ const songArray = [
 "https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Dry-Down-feat-Ben-Snaath.mp3"
 ];
 
+const songTitles = [
+  "Miac - The Longest Hum",
+  "P-Hase Hes",
+  "P-Hase Dry Down feat. Ben Snaath"
+];
+
+
 //play back
 function updateCurrentSong(songNumber){
   //input number
@@ -107,6 +114,10 @@ function updateCurrentSong(songNumber){
   videoElement.load();
   //playback
   videoElement.play();
+
+//update the song name alongside the song
+document.getElementById("songTitle").textContent = songTitles[songNumber];
+
 }
 
 videoElement.addEventListener("ended", playNextOnEnd);
@@ -115,10 +126,12 @@ function playNextOnEnd(){
   if(currentSongNumber < songArray.length - 1){
     updateCurrentSong(currentSongNumber + 1);
     currentSongNumber += 1;
+    updateCurrentSong(currentSongNumber);
   } else {
     // loop back to the start
     updateCurrentSong(0);
     currentSongNumber = 0;
+    updateCurrentSong(currentSongNumber);
   }
 }
 
