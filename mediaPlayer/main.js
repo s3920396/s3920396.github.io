@@ -132,9 +132,19 @@ function playNextOnEnd(){
     updateCurrentSong(0);
     currentSongNumber = 0;
     updateCurrentSong(currentSongNumber);
+
   }
 }
 
+//the skip button
+
+document.getElementById("skipButton").addEventListener("click", [playNextOnEnd]);
+
+// play first song
+updateCurrentSong(currentSongNumber);
+
+// when current song ends play the next one
+videoElement.addEventListener("ended", playNextOnEnd);
 
 
 
