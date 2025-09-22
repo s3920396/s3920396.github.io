@@ -122,3 +122,6 @@ function playNextOnEnd(){
   }
 }
 
+//show preview of next video
+
+
