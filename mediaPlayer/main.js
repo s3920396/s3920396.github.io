@@ -1,6 +1,6 @@
 /* THE A2 MAIN IDEA */
 /* work on making a play list*/
-/* I adjusted the loop of the songs by adding a titling. This was done by using Chatgpt*/
+/* I adjusted the loop of the songs by adding a titling. This was done by following a tutorial to implment a system that will display text when the song plays.*/
 
 /* fidn the interactive elements*/
 const videoElement = document.querySelector("#mediaPlayer");
