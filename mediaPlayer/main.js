@@ -16,7 +16,7 @@ videoElement.removeAttribute("controls");
 
 videoElement.addEventListener("canplay", updateTotalTime);
 
-function updateTimeline() {
+function updateTotalTime() {
   let videoSeconds = videoElement.duration;
   let totalMin = Math.floor(videoSeconds / 60);
   let totalAwx = videoSeconds % 60;
