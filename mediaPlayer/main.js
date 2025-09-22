@@ -1,6 +1,6 @@
 /* THE A2 MAIN IDEA */
 /* work on making a play list*/
-/* I adjusted the loop of the songs to display thumnbnails*/
+/* I adjusted the loop of the songs by   */
 
 /* fidn the interactive elements*/
 const videoElement = document.querySelector("#mediaPlayer");
@@ -92,7 +92,7 @@ videoElement.currentTime = videoElement.duration * clickPercent;
 // song listing
 let currentSongNumber = 0;
 
-//song storage
+//song storage for the loop
 const songArray = [
 "https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4",
 "https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Hes.mp3",
