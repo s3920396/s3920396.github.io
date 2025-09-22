@@ -122,6 +122,3 @@ function playNextOnEnd(){
   }
 }
 
-
-
-//loop back to start of the array
