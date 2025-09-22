@@ -23,7 +23,7 @@ function updateTotalTime() {
   if (totalSec < 10) {
     totalSec = "0" + totalSec;
   }
-  TimeTextContent = "${totalMin}:{totalSec}";
+  totalTimeText.textContent = "${totalMin}:{totalSec}";
 }
 
 /* play pause button behaviour: If media is not playing
@@ -53,10 +53,10 @@ I should be able to click and jump time
 */
 
 function updateTimeline() {
-  // findpercentage of total time
-  let timepercent = (videoElement.currentTime / videoElement.duration) * 100;
+  /* findpercentage of total time */
+  let timePercent = (videoElement.currentTime / videoElement.duration) * 100;
   //console.log(timePercent);
-  timeline.value = timepercent;
+  timeline.value = timePercent;
   updateCurentTime();
 }
 
