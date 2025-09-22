@@ -19,11 +19,11 @@ videoElement.addEventListener("canplay", updateTotalTime);
 function updateTotalTime() {
   let videoSeconds = videoElement.duration;
   let totalMin = Math.floor(videoSeconds / 60);
-  let totalAwx = videoSeconds % 60;
+  let totalSec = videoSeconds % 60;
   if (totalSec < 10) {
     totalSec = "0" + totalSec;
   }
-  totalTimeText.textContent = "${totalMin}:{totalSec}";
+  totalTimeText.textContent = '${totalMin}:{totalSec}';
 }
 
 /* play pause button behaviour: If media is not playing
@@ -68,7 +68,7 @@ function updateCurrentTime() {
   if (totalSec < 10) {
     totalSec = "0" + totalSec;
   }
-  TimeTextContent = "${totalMin}:{totalSec}";
+  currentTimeText.textContent = '${totalMin}:{totalSec}';
 }
 
 videoElement.addEventListener("timeupdate", updateTimeline);
