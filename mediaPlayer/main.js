@@ -113,7 +113,7 @@ videoElement.addEventListener("ended", playNextOnEnd);
 
 function playNextOnEnd(){
   if(currentSongNumber < songArray.length - 1){
-    updateCurrentSong(currentSongNumber + 2);
+    updateCurrentSong(currentSongNumber + 1);
     currentSongNumber += 1;
   } else {
     // loop back to the start
