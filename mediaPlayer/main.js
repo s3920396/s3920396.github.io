@@ -1,7 +1,7 @@
 /* THE A2 MAIN IDEA */
 /* work on making a play list*/
 /* I adjusted the loop of the songs by adding a titling. This was done by using ChatGPT to implment a code that will display text when the song plays.
-While helpful in recommending code, Chatgpt kept adding a video id element that would play alongside the main video or wouldn't work with the play button. */
+While helpful in recommending code for the skip button, Chatgpt kept adding a <video id= "video element" controls></video> this wouldn't alongside the main video or work with the play button. */
 
 /* find the interactive elements*/
 const videoElement = document.querySelector("#mediaPlayer");
