@@ -1,8 +1,9 @@
 /* store custom variables*/
+/* the webpage's main colour was changed to a lighter purple to watch the asethtic of the first song */
 :root {
-  --colour-01: white;
+  --colour-01: black;
   --colour-02: black;
-  --colour-03: cornflowerblue;
+  --colour-03:  rgb(182, 84, 182);
   --colour-04: coral;
   --border: sold coral 2px;
 }
