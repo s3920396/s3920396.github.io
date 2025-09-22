@@ -1,8 +1,9 @@
 /* THE A2 MAIN IDEA */
 /* work on making a play list*/
-/* I adjusted the loop of the songs by adding a titling. This was done by following a tutorial to implment a system that will display text when the song plays.*/
+/* I adjusted the loop of the songs by adding a titling. This was done by using ChatGPT to implment a code that will display text when the song plays.
+While helpful in recommending code, Chatgpt kept adding a video id element that would play alongside the main video or wouldn't work with the play button. */
 
-/* fidn the interactive elements*/
+/* find the interactive elements*/
 const videoElement = document.querySelector("#mediaPlayer");
 const playPauseButton = document.querySelector("#playPauseButton");
 const playPauseIcon = document.querySelector("#playPauseIcon");
@@ -98,7 +99,7 @@ const songArray = [
 "https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Hes.mp3",
 "https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Dry-Down-feat-Ben-Snaath.mp3"
 ];
-
+// all the song titles
 const songTitles = [
   "Miac - The Longest Hum",
   "P-Hase Hes",
