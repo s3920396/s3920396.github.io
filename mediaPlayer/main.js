@@ -1,6 +1,6 @@
 /* THE A2 MAIN IDEA */
-/* work on making a play list with buttons */
-/* buttons to switch between songs with thumbanails*/
+/* work on making a play list*/
+/* I adjusted the loop of the songs to display thumnbnails*/
 
 /* fidn the interactive elements*/
 const videoElement = document.querySelector("#mediaPlayer");
