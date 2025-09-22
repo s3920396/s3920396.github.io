@@ -23,7 +23,7 @@ function updateTotalTime() {
   if (totalSec < 10) {
     totalSec = "0" + totalSec;
   }
-  totalTimeText.textContent = '${totalMin}:${totalSec}';
+  totalTimeText.textContent = `${totalMin}:${totalSec}`;
 }
 
 /* play pause button behaviour: If media is not playing
@@ -68,7 +68,7 @@ function updateCurrentTime() {
   if (totalSec < 10) {
     totalSec = "0" + totalSec;
   }
-  currentTimeText.textContent = '${totalMin}:${totalSec}';
+  currentTimeText.textContent = `${totalMin}:${totalSec}`;
 }
 
 videoElement.addEventListener("timeupdate", updateTimeline);
