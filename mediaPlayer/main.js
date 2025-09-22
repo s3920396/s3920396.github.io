@@ -145,6 +145,13 @@ nextSongPreview.textContent = `Next up: ${fileName}`;
 
 }
 
+//end
+videoElement.addEventListener("ended", playNextOnEnd);
+
+function playerPauseButton(){
+  const nextIndex = (currentSongNumber + 1) % songArray.length;
+  updateCurrentSong(nextIndex);
+}
 
 
 
