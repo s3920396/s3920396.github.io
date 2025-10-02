@@ -1,8 +1,9 @@
 /* THE A2 MAIN IDEA */
-/* work on making a play list with buttons */
-/* buttons to switch between songs with thumbanails*/
+/* work on making a play list*/
+/* I adjusted the loop of the songs by adding a titling. This was done by using ChatGPT to implment a code that will display text when the song plays.
+While helpful in recommending code for the skip button, Chatgpt kept adding a <video id= "video element" controls></video> this wouldn't alongside the main video or work with the play button. */
 
-/* fidn the interactive elements*/
+/* find the interactive elements*/
 const videoElement = document.querySelector("#mediaPlayer");
 const playPauseButton = document.querySelector("#playPauseButton");
 const playPauseIcon = document.querySelector("#playPauseIcon");
@@ -16,14 +17,14 @@ videoElement.removeAttribute("controls");
 
 videoElement.addEventListener("canplay", updateTotalTime);
 
-function updateTimeline() {
+function updateTotalTime() {
   let videoSeconds = videoElement.duration;
   let totalMin = Math.floor(videoSeconds / 60);
-  let totalAwx = videoSeconds % 60;
+  let totalSec = videoSeconds % 60;
   if (totalSec < 10) {
     totalSec = "0" + totalSec;
   }
-  TimeTextContent = "${totalMin}:{totalSec}";
+  totalTimeText.textContent = `${totalMin}:${totalSec}`;
 }
 
 /* play pause button behaviour: If media is not playing
@@ -53,29 +54,93 @@ I should be able to click and jump time
 */
 
 function updateTimeline() {
-  // findpercentage of total time
-  let timepercent = (videoElement.currentTime / videoElement.duration) * 100;
+  /* findpercentage of total time */
+  let timePercent = (videoElement.currentTime / videoElement.duration) * 100;
   //console.log(timePercent);
-  timeline.value = timepercent;
+  timeline.value = timePercent;
   updateCurentTime();
 }
 
 //current time
-function updateTimeline() {
-  let videoSeconds = videoElement.duration;
+function updateCurrentTime() {
+  let videoSeconds = videoElement.currentTime;
   let totalMin = Math.floor(videoSeconds / 60);
   let totalSec = Math.floor(videoSeconds % 60);
   if (totalSec < 10) {
     totalSec = "0" + totalSec;
   }
-  TimeTextContent = "${totalMin}:{totalSec}";
+  currentTimeText.textContent = `${totalMin}:${totalSec}`;
 }
 
 videoElement.addEventListener("timeupdate", updateTimeline);
-// add different songs
 
-// based on number which of 4 songs to pick
+//when clicking on the timeline I will jump to it
+timeline.addEventListener("click", jumpToTime);
+
+function jumpToTime(ev){
+// find how far we clicked
+let clickX = ev.offsetX;
+//find how wide my timeline is
+let timeLineWidth = timeline.offsetWidth;
+// find the ratio of click to width of the song
+let clickPercent = clickX / timeLineWidth;
+//update the current time of the image
+videoElement.currentTime = videoElement.duration * clickPercent;
+
+}
+// play next song after perivous one ended
+
+// song listing
+let currentSongNumber = 0;
+
+//song storage for the loop
+const songArray = [
+"https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4",
+"https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Hes.mp3",
+"https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Dry-Down-feat-Ben-Snaath.mp3"
+];
+// all the song titles
+const songTitles = [
+  "Miac - The Longest Hum",
+  "P-Hase Hes",
+  "P-Hase Dry Down feat. Ben Snaath"
+];
+
 
 //play back
+function updateCurrentSong(songNumber){
+  //input number
+  mediaSource.src = songArray[songNumber];
+  //new song load
+  videoElement.load();
+  //playback
+  videoElement.play();
 
-//loop back to start of the array
+//update the song name alongside the song
+document.getElementById("songTitle").textContent = songTitles[songNumber];
+
+}
+
+videoElement.addEventListener("ended", playNextOnEnd);
+
+function playNextOnEnd(){
+  if(currentSongNumber < songArray.length - 1){
+    updateCurrentSong(currentSongNumber + 1);
+    currentSongNumber += 1;
+    updateCurrentSong(currentSongNumber);
+  } else {
+    // loop back to the start
+    updateCurrentSong(0);
+    currentSongNumber = 0;
+    updateCurrentSong(currentSongNumber);
+
+  }
+}
+
+//the skip button
+
+document.getElementById("skipButton").addEventListener("click", playNextOnEnd);
+
+
+
+

@@ -1,42 +1,50 @@
+<!DOCTYPE html>
+<!--The main goal of this assigment 2 is to create a playlist of songs. 
+the template of the music player was made in class. This was modified by adding in interactive element of a skip buttton that allows the user to fast forward to the next instead of waiting for the current song to end.
+As we needed an interactive element (The original idea was to create thumbnail previews of the next song. But this was changed to show song titles.) 
+As I wanted seperate videos with play buttons compared to one main one. But feared that this would break the mechanic of the play or use the default mp4 ui format. -->
+
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 
     <title>Audio visual player</title>
   </head>
   <body>
+
     <!--this is my header-->
-    <header><h1>Media player</h1></header>
-  </body>
-</html>
+    <header>
+      <h1>Music Player</h1>
+    </header>
+  
 <!--the nav bar-->
 <nav>
-  <a>Home</a>
-  <a>Media Player</a>
+  <a>Home page</a>
+  <a>The Media Player</a>
   <a>About</a>
   <a>Contact</a>
 </nav>
+
 <!-- the main section-->
 <main>
   <!--main media player-->
-  <section class="mediaPlayerSection"></section>
+  <section class="mediaPlayerSection">
   <video id="mediaPlayer" controls autoplay muted="true">
     <source
       id="mediaSource"
       src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
-      type="video/mp4"
-    />
-    This browser does not support this video element. />
+      type="video/mp4">
+    This browser does not support this video element.
   </video>
   <!--the media controlers-->
   <div class="mediaPlayerControlContainer">
     <button id="playerPauseButton">
-      <img id="playPauseIcon" src=".assets/play-icon.png" alt="play icon" />
+      <img id="playPauseIcon" src=".assets/play-icon.png" alt="play icon">
     </button>
     <progress id="timelineProgress" max="100" value="0"></progress>
     <!--let the user know how long the video is and what the current time is-->
@@ -44,11 +52,28 @@
       <span id="currentTimeFeedback">0:00</span>
       /
       <span id="totalTimeFeedback">4:30</span>
+      <!-- the song titles-->
+<div id="songTitle">Miac - The Longest Hum</div>
+<!-- skip button for the next song-->
+<button id="skipButton">Next Song</button>
+
+<div id="songTitle"></div>
+
     </p>
   </div>
+  </section>
 </main>
 
 <!-- the footer section-->
 <footer>
   <p>&copy; 2025 Media Player Website. All rights reserved.</p>
+  <a href="https://icons8.com/icon/59862/play">Play</a> icon by
+<a href="https://icons8.com">Icon8</a>
+<a href="https://icons8.com/icon/61012/play">Play</a> icon by
+<a href="https://icons8.com">icon8</a>
+
+
 </footer>
+
+</body>
+</html>
