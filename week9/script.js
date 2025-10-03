@@ -14,7 +14,7 @@ let ballScale = 1;
 
 //this function will take the current values and apply to ball
 function updateTransform() {
-  ball.style.transformation = `translateX(${ballTranslateX}px) rotate(${ballRotate}deg) scale(${ballScale})`;
+  ball.style.transform = `translateX(${ballTranslateX}px) rotate(${ballRotate}deg) scale(${ballScale})`;
 }
 
 //move ball
