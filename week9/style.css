@@ -33,9 +33,16 @@ body {
 
 input[type="text"] {
   border: 2px;
+  transition: background-color 0.2s ease;
 }
 
-input[type="text"] {
+input[type="text"]:focus {
+  background-color: purple;
+}
+
+#duck-icon {
+  width: 5rem;
+  /*fill the svg */
 }
 
 button {
