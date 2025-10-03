@@ -19,7 +19,13 @@ function updateTransform() {
 
 //move ball
 function moveBall() {
+    const parentSize= transformOuter.getBoundingClientRect();
+    const goal = (parentSize.eidth / 2) - 25;
+    console.log(parentSize)
   ballTranslateX += 10;
+  if(ballTranslateX > goal){
+    alert("you scored a goal");
+  }
   updateTransform();
 }
 // attach to button
@@ -34,6 +40,6 @@ rotateButton.addEventListener("click", rotateBall);
 
 //scale the ball
 function scaleBall{
-    
+
 }
 
