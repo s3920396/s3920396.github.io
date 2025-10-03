@@ -102,3 +102,11 @@ button:hover {
 .moveright {
   translate: 50px 0px;
 }
+
+/* media query for reducing motion */
+@media (prefers-reduced-motion: reduce) {
+  .outer {
+    /* if user prefers reduced mtion to set animation to none */
+    animation: none;
+  }
+}
