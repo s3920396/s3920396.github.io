@@ -32,7 +32,10 @@ body {
 }
 
 input[type="text"] {
-  transition: border-color;
+  border: 2px;
+}
+
+input[type="text"] {
 }
 
 button {
