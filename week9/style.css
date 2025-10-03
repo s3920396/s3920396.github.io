@@ -70,7 +70,7 @@ button:hover {
   transition: transform 0.7s ease-out;
   transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   transition: translate 0.8s ease-out rotate 0.8s ease scale 0.8s ease;
-  animation: colorShift 4s linear 2s 2 alternate;
+  animation: colorShift 4s linear 2s 2 forwards;
 }
 @keyframes colorShift {
   0% {
