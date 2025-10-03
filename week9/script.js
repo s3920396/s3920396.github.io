@@ -40,6 +40,7 @@ rotateButton.addEventListener("click", rotateBall);
 
 //scale the ball
 function scaleBall{
-
+ballScale += 2;
+updateTransform();
 }
-
+scaleButton.addEventListener("click", rotateBall);
