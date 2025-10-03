@@ -20,7 +20,7 @@ function updateTransform() {
 //move ball
 function moveBall() {
     const parentSize= transformOuter.getBoundingClientRect();
-    const goal = (parentSize.eidth / 2) - 25;
+    const goal = (parentSize.width / 2) - 25;
     console.log(parentSize)
   ballTranslateX += 10;
   if(ballTranslateX > goal){
