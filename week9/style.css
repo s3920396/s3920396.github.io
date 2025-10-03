@@ -68,9 +68,30 @@ button:hover {
   /* border-radius: 50%; */
   background-color: purple;
   transition: transform 0.7s ease-out;
-  /* transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); */
-  /* transition: translate 0.8s ease-out rotate 0.8s ease scale 0.8s ease; */
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); */
+  transition: translate 0.8s ease-out rotate 0.8s ease scale 0.8s ease; */
+  animation: colorShift 4s linear 2s 2;
 }
+@keyframes  colorShift {
+    0%{
+        background-color: purple;
+    }
+    25%{
+        background-color: red;
+    }
+    50%{
+        background-color: orange;
+    }
+    75%{
+        background-color: blue;
+    }
+    100%{
+        background-color: purple;
+    }
+    
+    
+}
+
 
 .controls {
   display: flex;
