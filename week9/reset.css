@@ -43,7 +43,7 @@ h6 {
 }
 
 p {
-  /* max-width: 75ch; */
+  max-width: 75ch;
   text-wrap: pretty; /* Prevents orphans on lines */
 }
 
@@ -52,10 +52,4 @@ p {
     scroll-behavior: smooth;
     scroll-padding-top: 3rem;
   }
-}
-input,
-button,
-textarea,
-select {
-  font: inherit;
 }
