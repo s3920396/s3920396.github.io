@@ -2,34 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The card gane</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Space+Grotesk&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The card game</title>
+  <link rel="stylesheet" href="cards.css">
+  <script src="main.js"></script>
   </head>
+
   <body>
-    <!-- Topic 2: Learn about drag and drop effect -->
-    <div id="game-screen">
-      <section>
-        <div class="deck">
-          <div class="card-container">
-            <div class="card" draggable="true">
-              <div class="card-face"><img src="jack.png" alt="Back" /></div>
-              <div class="card-face flip">
-                <img src="queen.png" alt="Queen" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="dropbox card-container"></div>
-      </section>
-    </div>
+<h2>The Time: <span id="time"></span></h2>
+<div id="board"></div>
   </body>
 </html>
