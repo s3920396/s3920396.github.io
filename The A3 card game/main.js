@@ -7,6 +7,9 @@ var cardList =[
 
 var cardSet;
 var board= [];
+var rows = 4;
+var columns =5;
+
 
 window.onload = function() {
     shuffleCards();
@@ -29,6 +32,20 @@ function shuffleCards() {
 
 }
 
-function startGame {
-    
+function startGame() {
+// arrange the board of 4x5
+for(let r = 0; r < rows; r++) {
+    for(let c = 0; c < columns; c++){
+        let cardImg = cardSet.pop();
+        rows.push(cardImg); //javascript
+
+// adding img id and card elements
+        let card = document.createElement("img");
+        card.id = r.toString() + "-" + c.toString();
+        card.src = cardImg + ".png";
+        card.classList.add("card");
+document.getElementById("board").append(card);
+
+    }
+}
 }
