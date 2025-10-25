@@ -2,7 +2,8 @@
 var errors = 0;
 var cardList =[
     "queen",
-    "jack"
+    "jack",
+    "king"
 ]
 
 var cardSet;
@@ -75,7 +76,7 @@ function selectCard() {
             let r = parseInt(coords[0]);
             let c = parseInt(coords[1]);
 
-            card1Selected.src board[r][c] + ".png";
+            card1Selected.src = board[r][c] + ".png";
         
         }
         else if (!card2Selected && this != card1Selected) {
