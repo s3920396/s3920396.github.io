@@ -39,7 +39,7 @@ for(let r = 0; r < rows; r++) {
         let cardImg = cardSet.pop();
         rows.push(cardImg); //javascript
 
-// adding img id and card elements
+// adding img id and card elements and repeat it 20 times
         let card = document.createElement("img");
         card.id = r.toString() + "-" + c.toString();
         card.src = cardImg + ".png";
@@ -47,5 +47,11 @@ for(let r = 0; r < rows; r++) {
 document.getElementById("board").append(card);
 
     }
+    board.push(row);
 }
+console.log(board);
+}
+
+function hideCards() {
+
 }
