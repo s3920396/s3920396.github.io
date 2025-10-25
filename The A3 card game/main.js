@@ -9,7 +9,7 @@ var cardList =[
 var cardSet;
 var board= [];
 var rows = 4;
-var columns =5;
+var columns = 5;
 
 var card1Selected;
 var card2Selected;
@@ -49,7 +49,7 @@ for(let r = 0; r < rows; r++) {
         card.src = cardImg + ".png";
         card.classList.add("card");
         card.addEventListener("click", selectCard);
-document.getElementById("board").append(card);
+        document.getElementById("board").append(card);
 
     }
     board.push(row);
