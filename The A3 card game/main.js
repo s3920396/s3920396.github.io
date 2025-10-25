@@ -40,7 +40,7 @@ function startGame() {
 for(let r = 0; r < rows; r++) {
     for(let c = 0; c < columns; c++){
         let cardImg = cardSet.pop();
-        rows.push(cardImg); //javascript
+        row.push(cardImg); //javascript
 
 // adding img id and card elements and repeat it 20 times
         let card = document.createElement("img");
