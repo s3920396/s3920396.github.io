@@ -10,6 +10,8 @@ var board= [];
 var rows = 4;
 var columns =5;
 
+var card1Selected;
+var card2Selected;
 
 window.onload = function() {
     shuffleCards();
@@ -44,6 +46,7 @@ for(let r = 0; r < rows; r++) {
         card.id = r.toString() + "-" + c.toString();
         card.src = cardImg + ".png";
         card.classList.add("card");
+        card.addEventListener("click", selectCard);
 document.getElementById("board").append(card);
 
     }
@@ -56,8 +59,33 @@ setTimeout(hideCards,10000);
 function hideCards() {
  for (let r = 0; r < rows; r++) {
     for (let c = 0; c < columns; c++) {
-        let card = document.getElementById(r.toString() + "-" c.toString());
+        let card = document.getElementById(r.toString() + "-" + c.toString());
     card.src = "cloud.png";
 }
 }
+}
+
+function selectCard() {
+
+    if (this.src.includes("back")) {
+        if(card1Selected) {
+            card1Selected = this;
+
+            let coords = card1Selected.id.split("-"); 
+            let r = parseInt(coords[0]);
+            let c = parseInt(coords[1]);
+
+            card1Selected.src board[r][c] + ".png";
+        
+        }
+        else if (!card2Selected && this != card1Selected) {
+            card2Selected = this;
+
+            let coords = card2Selected.id.split("-"); 
+            let r = parseInt(coords[0]);
+            let c = parseInt(coords[1]);
+
+            card2Selected.src = board[r][c] + ".png";
+        }
+    }
 }
