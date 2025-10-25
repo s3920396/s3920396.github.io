@@ -69,7 +69,7 @@ function hideCards() {
 
 function selectCard() {
 
-    if (this.src.includes("back")) {
+    if (this.src.includes("cloud")) {
         if(card1Selected) {
             card1Selected = this;
 
@@ -96,8 +96,8 @@ function selectCard() {
 function update() {
     // if cards aren't the same, then flip them back
     if (card1Selected.src != card2Selected.src){
-        card1Selected.src = "back.jpg";
-        card2Selected.src = "back.jpg";
+        card1Selected.src = "cloud.png";
+        card2Selected.src = "cloud.png";
         errors += 1;
         document.getElementById("errors").innerText = errors;
 
