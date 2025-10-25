@@ -38,6 +38,7 @@ function shuffleCards() {
 function startGame() {
 // arrange the board of 4x5
 for(let r = 0; r < rows; r++) {
+    let row = [];
     for(let c = 0; c < columns; c++){
         let cardImg = cardSet.pop();
         row.push(cardImg); //javascript
