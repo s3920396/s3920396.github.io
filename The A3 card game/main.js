@@ -95,7 +95,7 @@ function selectCard() {
 
 function update() {
     // if cards aren't the same, then flip them back
-    if (card1Selected.src != card2Selected.src){
+    if (card1Selected.src != card2Selected.src) {
         card1Selected.src = "cloud.png";
         card2Selected.src = "cloud.png";
         errors += 1;
