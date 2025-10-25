@@ -23,7 +23,7 @@ function shuffleCards() {
     cardSet = cardList.concat(cardList); //make two of each card
     console.log(cardSet);
     //shuffle the cards
-    for (let i = 0; i <cardSet.length; i++) {
+    for (let i = 0; i < cardSet.length; i++) {
         let j = Math.floor(Math.random() * cardSet.length); //get random variables for the cards
         //swap
         let temp = cardSet[i];
@@ -39,7 +39,7 @@ function startGame() {
 // arrange the board of 4x5
 for(let r = 0; r < rows; r++) {
     let row = [];
-    for(let c = 0; c < columns; c++){
+    for(let c = 0; c < columns; c++) {
         let cardImg = cardSet.pop();
         row.push(cardImg); //javascript
 
