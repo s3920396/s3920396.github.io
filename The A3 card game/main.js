@@ -87,6 +87,20 @@ function selectCard() {
             let c = parseInt(coords[1]);
 
             card2Selected.src = board[r][c] + ".png";
+            setTimeout(update,1000);
         }
     }
+}
+
+function update() {
+    // if cards aren't the same, then flip them back
+    if (card1Selected.src != card2Selected.src){
+        card1Selected.src = "back.jpg";
+        card2Selected.src = "back.jpg";
+        errors += 1;
+        document.getElementById("errors").innerText = errors;
+
+    }
+ card1Selected = null;
+ card2Selected = null;
 }
