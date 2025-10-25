@@ -70,7 +70,7 @@ function hideCards() {
 function selectCard() {
 
     if (this.src.includes("cloud")) {
-        if(card1Selected) {
+        if(!card1Selected) {
             card1Selected = this;
 
             let coords = card1Selected.id.split("-"); 
