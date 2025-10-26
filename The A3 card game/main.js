@@ -46,7 +46,7 @@ for(let r = 0; r < rows; r++) {
 // adding img id and card elements and repeat it 20 times
         let card = document.createElement("img");
         card.id = r.toString() + "-" + c.toString();
-        card.src = cardImg + "png";
+        card.src = cardImg + ".png";
         card.classList.add("card");
         card.addEventListener("click", selectCard);
         document.getElementById("board").append(card);
