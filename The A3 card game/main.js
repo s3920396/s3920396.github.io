@@ -8,8 +8,7 @@ var cardList =[
 
 var cardSet;
 var board= [];
-var rows = 4;
-var columns = 5;
+
 
 var card1Selected;
 var card2Selected;
@@ -21,7 +20,7 @@ window.onload = function() {
 
 function shuffleCards() {
     cardSet = cardList.concat(cardList); //make two of each card
-    console.log(cardSet);
+    console.log(cardSetI);
     //shuffle the cards
     for (let i = 0; i < cardSet.length; i++) {
         let j = Math.floor(Math.random() * cardSet.length); //get random variables for the cards
@@ -30,7 +29,7 @@ function shuffleCards() {
         cardSet[i] = cardSet[j];
         cardSet[j] = temp;
     }
-    console.log(cardSet);
+    console.log(cardSetI);
 
 
 }
