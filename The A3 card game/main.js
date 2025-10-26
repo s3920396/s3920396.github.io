@@ -10,7 +10,7 @@ cardArray.sort(() => 0.5 - Math.random())
 
 function createBoard() {
     for(let i =0; i< cardArray.length; i++){
-        let card = document.createElement("Img");
+        let card = document.createElement("img");
         card.setAttribute("src", "./assets/cloud.png");
         card.setAttribute("data-id", i);
         card.addEventListener("click", flipCard);
@@ -22,13 +22,13 @@ function checkMatch() {
     let cards = document.querySelectorAll('img')
     if(pickedCards[0] === pickedCards[1]){
         alert("You found a match")
-        cards[pickedCardsId[0]].setAttribute('src', './assets/like.png')
-        cards[pickedCardsId[1]].setAttribute('src', './assets/like.png')
+        cards[pickedCardsId[0]].setAttribute("src", "./assets/like.png")
+        cards[pickedCardsId[1]].setAttribute("src", "./assets/like.png")
         match.push(pickedCards)
     } else{
-        alert("try again")
-        cards[pickedCardsId[0]].setAttribute('src', './assets/cloud.png')
-        cards[pickedCardsId[1]].setAttribute('src', './assets/cloud.png')
+        alert("Try again")
+        cards[pickedCardsId[0]].setAttribute("src", "./assets/cloud.png")
+        cards[pickedCardsId[1]].setAttribute("src", "./assets/cloud.png")
     }
     pickedCards = []
     pickedCardsId = []
@@ -46,7 +46,7 @@ function flipCard() {
     pickedCardsId.push(cardId);
     this.setAttribute("src", cardArray[cardId].img);
 
-    if(pickedCards.length = 2){
+    if(pickedCards.length === 2){
        setTimeout(checkMatch, 500);
     }
 }
