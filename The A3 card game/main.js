@@ -42,7 +42,7 @@ function checkMatch() {
 
 function flipCard() {
     let cardId = this.getAttribute("data-id");
-    pickedCards.push(cardsArray[cardId].name);
+    pickedCards.push(cardArray[cardId].name);
     pickedCardsId.push(cardId);
     this.setAttribute("src", cardArray[cardId].img);
 
