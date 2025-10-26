@@ -1,16 +1,18 @@
-const result = document.getElementById('result');
-const grid = document.querySelector('.cards');
+const result = document.getElementById("result");
+const grid = document.querySelector(".cards");
 
 let pickedCards = [];
 let pickedCardsId = [];
 let match = [];
 
+result.innerHTML = 0
+
 function createBoard() {
     for(let i =0; i< cardsArray.length; i++){
-        let card = document.createElement('Img');
-        card.setAttribute('src', './cards/cloud.png');
-        card.setAttribute('data-id', i);
-        card.addEventListener('click', flipCard);
+        let card = document.createElement("Img");
+        card.setAttribute("src", "./cards/cloud.png");
+        card.setAttribute("data-id", i);
+        card.addEventListener("click", flipCard);
         grid.appendChild(card);
     }
 }
@@ -38,10 +40,10 @@ function checkMatch() {
 }
 
 function flipCard() {
-    let cardId = this.getAttribute('data-id');
+    let cardId = this.getAttribute("data-id");
     pickedCards.push(cardsArray[cardId].name);
     pickedCardsId.push(cardId);
-    this.setAttribute('src', cardArray[cardId].img);
+    this.setAttribute("src", cardArray[cardId].img);
 
     if(pickedCards.length = 2){
        setTimeout(checkMatch, 500);
