@@ -1,8 +1,9 @@
+const result = document.getElementById('result')
+const grid = document.querySelector('.cards')
 
-var cardSet;
-var board= [];
-var rows = 4;
-var columns =5;
+let pickedCards = []
+let pickedCardsId = []
+let match = []
 
 var card1Selected;
 var card2Selected;
