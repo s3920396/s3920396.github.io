@@ -1,5 +1,6 @@
 const result = document.getElementById("result");
 const grid = document.querySelector(".cards");
+const dropZone = document.querySelector(".drop-zone");
 
 let pickedCards = [];
 let pickedCardsId = [];
@@ -19,18 +20,49 @@ function createBoard() {
 
 //make a drag event
 card.addEventListener("dragstart", dragStart);
-card.addEventListener("dragover", dragOver);
-card.addEventListener("drop", dragCard);
+card.addEventListener("dragend", dragEnd);
 grid.appendChild(card);
     }
 }
 
 function dragStart(){
-    draggedCardId -this.getAttribute("data-id");
+    e.dataTransfer.setData("text/plain", this,getAttribute("data-id"));
+    this.classList.add("dragging");
 }
 
+function dragEnd(){
+    this.classList.remove("dragging");
+}
 
+// dragging zone events
+dropZone.addEventListener("dragover", () => {
+    e.preventDefult();
+    dropZone.classList.add("dragover");
+});
 
+dropZone.addEventListener("dragleave", () =>{
+    dropZone.classList.remove("dragover");
+
+});
+
+dropZone.addEventListener("drop", () => {
+    e.preventDefult();
+    dropZone.classList.remove("dragover");
+});
+
+const cardId =e.dataTransfer.getData("text/plain");
+const cardData = cardArray[cardId];
+const cardEl = document.querySelector(`[data-id='${cardId}']`);
+
+// flip and moving the card into the drop zone
+cardEl.setAttribute("src", cardData.img);
+dropZone.appendChild(cardEl);
+droppedCards.push({cardEl, cardData, cardId});
+
+//if the two cards are in the zone, they will be checked if they match
+ if(pickedCards.length === 2){
+       setTimeout(checkMatch, 700);
+    }
 function checkMatch() {
     let cards = document.querySelectorAll('img')
     if(pickedCards[0] === pickedCards[1]){
@@ -59,9 +91,7 @@ function flipCard() {
     pickedCardsId.push(cardId);
     this.setAttribute("src", cardArray[cardId].img);
 
-    if(pickedCards.length === 2){
-       setTimeout(checkMatch, 500);
-    }
+   
 }
 
 createBoard();
