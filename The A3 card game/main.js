@@ -6,6 +6,7 @@ let pickedCardsId = [];
 let match = [];
 
 result.innerHTML = 0
+cardArray.sort(() => 0.5 - Math.random())
 
 function createBoard() {
     for(let i =0; i< cardsArray.length; i++){
