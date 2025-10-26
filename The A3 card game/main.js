@@ -84,7 +84,7 @@ function flipCard(cardEl, showFront) {
     else cardEl.classList.remove("flipped");
 }
 
-
+// this is to check if the images match if not it will return to the page
 function checkMatch() {
     const [first, second] = droppedCards;
     if (!first || !second) return;
