@@ -46,7 +46,7 @@ for(let r = 0; r < rows; r++) {
 // adding img id and card elements and repeat it 20 times
         let card = document.createElement("img");
         card.id = r.toString() + "-" + c.toString();
-        card.src = cardImg + ".png";
+        card.src = cardImg + ".jpg";
         card.classList.add("card");
         card.addEventListener("click", selectCard);
         document.getElementById("board").append(card);
@@ -62,7 +62,7 @@ function hideCards() {
  for (let r = 0; r < rows; r++) {
     for (let c = 0; c < columns; c++) {
         let card = document.getElementById(r.toString() + "-" + c.toString());
-    card.src = "cloud.png";
+    card.src = "cloud.jpg";
 }
 }
 }
@@ -77,7 +77,7 @@ function selectCard() {
             let r = parseInt(coords[0]);
             let c = parseInt(coords[1]);
 
-            card1Selected.src = board[r][c] + ".png";
+            card1Selected.src = board[r][c] + ".jpg";
         
         }
         else if (!card2Selected && this != card1Selected) {
@@ -87,7 +87,7 @@ function selectCard() {
             let r = parseInt(coords[0]);
             let c = parseInt(coords[1]);
 
-            card2Selected.src = board[r][c] + ".png";
+            card2Selected.src = board[r][c] + ".jpg";
             setTimeout(update,1000);
         }
     }
@@ -96,8 +96,8 @@ function selectCard() {
 function update() {
     // if cards aren't the same, then flip them back
     if (card1Selected.src != card2Selected.src) {
-        card1Selected.src = "cloud.png";
-        card2Selected.src = "cloud.png";
+        card1Selected.src = "cloud.jpg";
+        card2Selected.src = "cloud.jpg";
         errors += 1;
         document.getElementById("errors").innerText = errors;
 
