@@ -66,23 +66,31 @@ droppedCards.push({cardEl, cardData, cardId});
 });
 
 
-
-
 function checkMatch() {
-    let cards = document.querySelectorAll('img')
-    if(pickedCards[0] === pickedCards[1]){
-        alert("You found a match")
-        cards[pickedCardsId[0]].setAttribute("src", "./assets/like.png")
-        cards[pickedCardsId[1]].setAttribute("src", "./assets/like.png")
-        match.push(pickedCards)
+    const [first, second] = droppedCards;
+
+    if(first.cardData.name === secondData.name) {
+        alert("You found a match");
+        match.push([first, second])
+        result.innerHTML = match.length
+
+    // disable dragging the matched cards        
+        first.cardEl.setAttribute("draggable", "false");
+        second.cardEl.setAttribute("draggable", "false");
+        first.cardEl.style.opacity = "0.7";
+        second.cardEl.style.opacity = "0.7";
     } else{
         alert("Try again")
-        cards[pickedCardsId[0]].setAttribute("src", "./assets/cloud.png")
-        cards[pickedCardsId[1]].setAttribute("src", "./assets/cloud.png")
+
+        //flip back and return to the grid
+        first.cardEl.setAttribute("src", "./assets/cloud.png");
+       second.cardEl.setAttribute("src", "./assets/cloud.png");
+
+       grid.appendChild(first.cardEl);
+       grid.appendChild(second.cardEl);
     }
-    pickedCards = []
-    pickedCardsId = []
-    result.innerHTML = match.length
+    
+    droppedCards = [];
 
     if(match.length === cardArray.length /2){
         grid.textContent = "Congratulations"
@@ -90,13 +98,5 @@ function checkMatch() {
 
 }
 
-function flipCard() {
-    let cardId = this.getAttribute("data-id");
-    pickedCards.push(cardArray[cardId].name);
-    pickedCardsId.push(cardId);
-    this.setAttribute("src", cardArray[cardId].img);
-
-   
-}
 
 createBoard();
