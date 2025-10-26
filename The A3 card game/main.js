@@ -5,8 +5,9 @@ const dropZone = document.querySelector(".drop-zone");
 let match = [];
 let draggedCards = [];
 
-result.innerHTML = 0
-cardArray.sort(() => 0.5 - Math.random())
+
+cardArray.sort(() => 0.5 - Math.random());
+result.innerHTML = 0;
 
 function createBoard() {
     for(let i =0; i< cardArray.length; i++){
@@ -15,6 +16,21 @@ function createBoard() {
         card.setAttribute("data-id", i);
         card.setAttribute("draggable", "true");
         
+        //making a flip animation for the cards
+        const cardInner = document.createElement("div");
+        cardInner.classList.add("card-inner");
+
+        const cardFront = document.createElement("img");
+        cardFront.classList.add("card-front");
+        cardFront.src = cardArray[i].img;
+
+        const cardBack = document.createElement("img");
+        cardBack.classList.add("card-back");
+        cardBack.src = "./assets/cloud.png";
+
+        cardInner.appendChild(cardFront);
+        cardInner.appendChild(cardBack);
+        card.appendChild(cardInner);
 
 //make a drag event
 card.addEventListener("dragstart", dragStart);
@@ -53,15 +69,20 @@ const cardData = cardArray[cardId];
 const cardEl = document.querySelector(`[data-id='${cardId}']`);
 
 // flip and moving the card into the drop zone
-cardEl.setAttribute("src", cardData.img);
+flipCard(cardEl, true);
 dropZone.appendChild(cardEl);
 droppedCards.push({cardEl, cardData, cardId});
 
 //if the two cards are in the zone, they will be checked if they match
  if(pickedCards.length === 2){
-       setTimeout(checkMatch, 700);
+       setTimeout(checkMatch, 800);
     }
 });
+
+function flipCard(cardEl, showFront) {
+    if (showFront) cardEl.classList.add("flipped");
+    else cardEl.classList.remove("flipped");
+}
 
 
 function checkMatch() {
@@ -81,9 +102,8 @@ function checkMatch() {
         alert("Try again")
 
         //flip back and return to the grid
-        first.cardEl.setAttribute("src", "./assets/cloud.png");
-       second.cardEl.setAttribute("src", "./assets/cloud.png");
-
+        flipCard(first.cardEl, false);
+        flipCard(second.cardEl, false);
        grid.appendChild(first.cardEl);
        grid.appendChild(second.cardEl);
     }
@@ -93,8 +113,6 @@ function checkMatch() {
     if(match.length === cardArray.length /2){
         grid.textContent = "Congratulations"
     }
-
 }
-
 
 createBoard();
