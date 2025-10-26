@@ -16,17 +16,22 @@ function createBoard() {
 }
 
 function checkMatch() {
+    let cards = document.querySelectorAll('img')
+    if(pickedCards[0] === pickedCards[1]){
+        alert("You found a match")
+        cards[pickedCardsId[0].setAttribute('src', './assets/like.png')]
+    }
 
 }
 
 function flipCard() {
-    let cardId = this.getAttribute('data-id')
-    pickedCards.push(cardsArray[cardId].name)
-    pickedCardsId.push(cardId)
-    this.setAttribute('src', cardArray[cardId].img)
+    let cardId = this.getAttribute('data-id');
+    pickedCards.push(cardsArray[cardId].name);
+    pickedCardsId.push(cardId);
+    this.setAttribute('src', cardArray[cardId].img);
 
     if(pickedCards.length = 2){
-       setTimeout(checkMatch, 500)
+       setTimeout(checkMatch, 500);
     }
 }
 
