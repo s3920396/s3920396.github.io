@@ -48,7 +48,7 @@ dropZone.addEventListener("dragleave", () =>{
 dropZone.addEventListener("drop", () => {
     e.preventDefult();
     dropZone.classList.remove("dragover");
-});
+
 
 const cardId =e.dataTransfer.getData("text/plain");
 const cardData = cardArray[cardId];
@@ -63,6 +63,11 @@ droppedCards.push({cardEl, cardData, cardId});
  if(pickedCards.length === 2){
        setTimeout(checkMatch, 700);
     }
+});
+
+
+
+
 function checkMatch() {
     let cards = document.querySelectorAll('img')
     if(pickedCards[0] === pickedCards[1]){
