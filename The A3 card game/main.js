@@ -3,8 +3,7 @@ var errors = 0;
 var cardList =[
     "queen",
     "jack",
-    "king",
-    "cloud"
+    "king"
 ]
 
 var cardSet;
@@ -47,7 +46,7 @@ for(let r = 0; r < rows; r++) {
 // adding img id and card elements and repeat it 20 times
         let card = document.createElement("img");
         card.id = r.toString() + "-" + c.toString();
-        card.src = cardImg + ".jpg";
+        card.src = cardImg + ".png";
         card.classList.add("card");
         card.addEventListener("click", selectCard);
         document.getElementById("board").append(card);
@@ -78,7 +77,7 @@ function selectCard() {
             let r = parseInt(coords[0]);
             let c = parseInt(coords[1]);
 
-            card1Selected.src = board[r][c] + ".jpg";
+            card1Selected.src = board[r][c] + "cloud.png";
         
         }
         else if (!card2Selected && this != card1Selected) {
@@ -88,7 +87,7 @@ function selectCard() {
             let r = parseInt(coords[0]);
             let c = parseInt(coords[1]);
 
-            card2Selected.src = board[r][c] + ".jpg";
+            card2Selected.src = board[r][c] + "cloud.png";
             setTimeout(update,1000);
         }
     }
