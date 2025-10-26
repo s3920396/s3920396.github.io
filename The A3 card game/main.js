@@ -64,7 +64,7 @@ dropZone.addEventListener("drop", (e) => {
     dropZone.classList.remove("dragover");
 
 
-const cardId =e.dataTransfer.getData("text/plain");
+const cardId = e.dataTransfer.getData("text/plain");
 const cardData = cardArray[cardId];
 const cardEl = document.querySelector(`[data-id='${cardId}']`);
 
@@ -74,7 +74,7 @@ dropZone.appendChild(cardEl);
 droppedCards.push({cardEl, cardData, cardId});
 
 //if the two cards are in the zone, they will be checked if they match
- if(dropppedCards.length === 2){
+ if(droppedCards.length === 2){
        setTimeout(checkMatch, 800);
     }
 });
@@ -90,8 +90,8 @@ function checkMatch() {
 
     if(first.cardData.name === secondData.name) {
         alert("You found a match");
-        match.push([first, second])
-        result.innerHTML = match.length
+        match.push([first, second]);
+        result.innerHTML = match.length;
 
     // disable dragging the matched cards        
         first.cardEl.setAttribute("draggable", "false");
