@@ -23,8 +23,16 @@ function checkMatch() {
         cards[pickedCardsId[1]].setAttribute('src', './assets/like.png')
         match.push(pickedCards)
     } else{
+        alert("try again")
         cards[pickedCardsId[0]].setAttribute('src', './assets/cloud.png')
         cards[pickedCardsId[1]].setAttribute('src', './assets/cloud.png')
+    }
+    pickedCards = []
+    pickedCardsId = []
+    result.innerHTML = match.length
+
+    if(match.length === cardArray.length /2){
+        grid.textContent = "Congratulations"
     }
 
 }
