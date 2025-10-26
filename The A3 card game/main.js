@@ -19,7 +19,12 @@ function checkMatch() {
     let cards = document.querySelectorAll('img')
     if(pickedCards[0] === pickedCards[1]){
         alert("You found a match")
-        cards[pickedCardsId[0].setAttribute('src', './assets/like.png')]
+        cards[pickedCardsId[0]].setAttribute('src', './assets/like.png')
+        cards[pickedCardsId[1]].setAttribute('src', './assets/like.png')
+        match.push(pickedCards)
+    } else{
+        cards[pickedCardsId[0]].setAttribute('src', './assets/cloud.png')
+        cards[pickedCardsId[1]].setAttribute('src', './assets/cloud.png')
     }
 
 }
