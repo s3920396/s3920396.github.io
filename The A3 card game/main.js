@@ -5,8 +5,17 @@ let pickedCards = []
 let pickedCardsId = []
 let match = []
 
-var card1Selected;
-var card2Selected;
+function createBoard() {
+    for(let i =0; i< cardsArray.length; i++){
+        let card = document.createElement('Img')
+        card.setAttribute('src', './cards/cloud.png')
+        card.setAttribute('data-id', i)
+        card.addEventListener('click', flipCard)
+        grid.appendChild(card)
+    }
+}
+
+function flipCard() {}
 
 window.onload = function() {
     shuffleCards();
