@@ -11,7 +11,7 @@ cardArray.sort(() => 0.5 - Math.random())
 function createBoard() {
     for(let i =0; i< cardArray.length; i++){
         let card = document.createElement("Img");
-        card.setAttribute("src", "./assets/cloud.png");
+        card.setAttribute("src", "./ass/cloud.png");
         card.setAttribute("data-id", i);
         card.addEventListener("click", flipCard);
         grid.appendChild(card);
