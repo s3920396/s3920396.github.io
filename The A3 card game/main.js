@@ -11,8 +11,8 @@ result.innerHTML = 0;
 
 function createBoard() {
     for(let i =0; i< cardArray.length; i++){
-        let card = document.createElement("img");
-        card.setAttribute("src", "./assets/cloud.png");
+        const card = document.createElement("div");
+        card.classList.add("card");
         card.setAttribute("data-id", i);
         card.setAttribute("draggable", "true");
         
@@ -40,7 +40,7 @@ grid.appendChild(card);
 }
 
 function dragStart(e){
-    e.dataTransfer.setData("text/plain", this,getAttribute("data-id"));
+    e.dataTransfer.setData("text/plain", this.getAttribute("data-id"));
     this.classList.add("dragging");
 }
 
@@ -87,6 +87,7 @@ function flipCard(cardEl, showFront) {
 
 function checkMatch() {
     const [first, second] = droppedCards;
+    if (!first || !second) return;
 
     if(first.cardData.name === second.cardData.name) {
         alert("You found a match");
