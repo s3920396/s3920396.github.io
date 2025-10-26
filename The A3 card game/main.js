@@ -9,7 +9,7 @@ result.innerHTML = 0
 cardArray.sort(() => 0.5 - Math.random())
 
 function createBoard() {
-    for(let i =0; i< cardsArray.length; i++){
+    for(let i =0; i< cardArray.length; i++){
         let card = document.createElement("Img");
         card.setAttribute("src", "./cards/cloud.png");
         card.setAttribute("data-id", i);
