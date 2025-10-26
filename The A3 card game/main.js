@@ -2,8 +2,9 @@ const result = document.getElementById("result");
 const grid = document.querySelector(".cards");
 const dropZone = document.querySelector(".drop-zone");
 
+
 let match = [];
-let dropppedCards = [];
+let droppedCards = [];
 
 cardArray.sort(() => 0.5 - Math.random());
 result.innerHTML = 0;
@@ -38,7 +39,7 @@ grid.appendChild(card);
     }
 }
 
-function dragStart(){
+function dragStart(e){
     e.dataTransfer.setData("text/plain", this,getAttribute("data-id"));
     this.classList.add("dragging");
 }
@@ -48,8 +49,8 @@ function dragEnd(){
 }
 
 // dragging zone events
-dropZone.addEventListener("dragover", () => {
-    e.preventDefult();
+dropZone.addEventListener("dragover", (e) => {
+    e.preventDefault();
     dropZone.classList.add("dragover");
 });
 
@@ -58,8 +59,8 @@ dropZone.addEventListener("dragleave", () =>{
 
 });
 
-dropZone.addEventListener("drop", () => {
-    e.preventDefult();
+dropZone.addEventListener("drop", (e) => {
+    e.preventDefault();
     dropZone.classList.remove("dragover");
 
 
@@ -73,7 +74,7 @@ dropZone.appendChild(cardEl);
 droppedCards.push({cardEl, cardData, cardId});
 
 //if the two cards are in the zone, they will be checked if they match
- if(pickedCards.length === 2){
+ if(dropppedCards.length === 2){
        setTimeout(checkMatch, 800);
     }
 });
