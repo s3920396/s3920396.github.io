@@ -2,11 +2,8 @@ const result = document.getElementById("result");
 const grid = document.querySelector(".cards");
 const dropZone = document.querySelector(".drop-zone");
 
-let pickedCards = [];
-let pickedCardsId = [];
 let match = [];
-let draggedCards = [];
-
+let dropppedCards = [];
 
 cardArray.sort(() => 0.5 - Math.random());
 result.innerHTML = 0;
