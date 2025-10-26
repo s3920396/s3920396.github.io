@@ -88,7 +88,7 @@ function flipCard(cardEl, showFront) {
 function checkMatch() {
     const [first, second] = droppedCards;
 
-    if(first.cardData.name === secondData.name) {
+    if(first.cardData.name === second.cardData.name) {
         alert("You found a match");
         match.push([first, second]);
         result.innerHTML = match.length;
