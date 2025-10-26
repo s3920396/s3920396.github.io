@@ -13,7 +13,12 @@ function createBoard() {
         let card = document.createElement("img");
         card.setAttribute("src", "./assets/cloud.png");
         card.setAttribute("data-id", i);
+        card.setAttribute("draggable", "true");
         card.addEventListener("click", flipCard);
+
+//make a drag event
+card.addEventListener("dragstart")
+
         grid.appendChild(card);
     }
 }
