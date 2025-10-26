@@ -2,10 +2,8 @@ const result = document.getElementById("result");
 const grid = document.querySelector(".cards");
 const dropZone = document.querySelector(".drop-zone");
 
-let pickedCards = [];
-let pickedCardsId = [];
 let match = [];
-let draggedCardId;
+let draggedCards = [];
 
 result.innerHTML = 0
 cardArray.sort(() => 0.5 - Math.random())
@@ -16,7 +14,7 @@ function createBoard() {
         card.setAttribute("src", "./assets/cloud.png");
         card.setAttribute("data-id", i);
         card.setAttribute("draggable", "true");
-        card.addEventListener("click", flipCard);
+        
 
 //make a drag event
 card.addEventListener("dragstart", dragStart);
