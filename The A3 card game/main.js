@@ -15,7 +15,22 @@ function createBoard() {
     }
 }
 
-function flipCard() {}
+function checkMatch() {
+
+}
+
+function flipCard() {
+    let cardId = this.getAttribute('data-id')
+    pickedCards.push(cardsArray[cardId].name)
+    pickedCardsId.push(cardId)
+    this.setAttribute('src', cardArray[cardId].img)
+
+    if(pickedCards.length = 2){
+       setTimeout(checkMatch, 500)
+    }
+}
+
+createBoard()
 
 window.onload = function() {
     shuffleCards();
