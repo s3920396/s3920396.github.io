@@ -4,6 +4,7 @@ const grid = document.querySelector(".cards");
 let pickedCards = [];
 let pickedCardsId = [];
 let match = [];
+let draggedCardId;
 
 result.innerHTML = 0
 cardArray.sort(() => 0.5 - Math.random())
@@ -17,11 +18,18 @@ function createBoard() {
         card.addEventListener("click", flipCard);
 
 //make a drag event
-card.addEventListener("dragstart")
-
-        grid.appendChild(card);
+card.addEventListener("dragstart", dragStart);
+card.addEventListener("dragover", dragOver);
+card.addEventListener("drop", dragCard);
+grid.appendChild(card);
     }
 }
+
+function dragStart(){
+    draggedCardId -this.getAttribute("data-id");
+}
+
+
 
 function checkMatch() {
     let cards = document.querySelectorAll('img')
