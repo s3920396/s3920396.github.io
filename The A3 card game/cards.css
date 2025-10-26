@@ -1,20 +1,41 @@
 body {
+    min-height: 100vh;
+    min-width: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    background-color: black;
+    color: white;
 }
 
-#board {
-    height: 532px;
-    width: 475px;
-    margin: 0 auto;
+h1 {
+ text-align: center;
+ font-weight: 700;
+ font-size: 50px;
+}
+
+p {
+    text-align: center;
+ font-size: 30px;
+ font-weight: bold;
+}
+
+.actions {
     display: flex;
-    flex-wrap: wrap;
-    background-color: green;
-    border: 10px solid lightgrey;
+    justify-content: center;
 }
 
-.card {
-    height: 128px;
-    width: 90px;
-    margin: 2.5px;
+.action button {
+    padding: 8px 16px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+}
+
+.grid-container {
+    display:grid;
+    justify-content: center;
+    grid-gap: 16px;
+    grid-template-columns: repeat(6, 140px);
+    grid-template-rows: repeat(2, calc(140px / 2 * 3));
 }
