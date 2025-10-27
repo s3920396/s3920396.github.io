@@ -13,6 +13,7 @@ result.innerHTML = 0;
 // make a game board 
 //the card game followed the typically template 
 // This involved 
+// 
 // I struggled alot trying to get the .png cards to duplciate as when I tried running the game I kept getting an error of Undefinied.png being used for 3/4 of the array for cards.
 // I orginally thought it was an issues of the images being pngs so I tried jpegs. But still the issue persisted. It was finally found out by changing the '' for the to "" comma for the function to print all the cards as normal.
 //when implementing the the on drag 
