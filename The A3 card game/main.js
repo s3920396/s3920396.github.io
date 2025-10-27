@@ -13,11 +13,11 @@ result.innerHTML = 0;
 //My inital concept for my game is to make a card game. Where the player dragged matching cards into a zone within a certain time limit and some cards become frozen and need to clicked on.
 //When trying to make my concept of dragging card game into reality, I followed a tutorial to make an on click matching card game and later for the drag function. 
 //This acted a template to get my 3 cards to spawn in pairs on the menu and get them to match. 
-// However I struggled alot trying to get the .png cards to duplicated as when I tried running the game I kept getting an error of Undefinied.png being used for 3/4 of the array for cards.
-// I orginally thought it was an issues of the images being pngs so I tried jpegs. But still the issue persisted. It was finally found out by changing the '' for the to "" comma for the function to print all the cards as normal.
-//when implementing the drag interact for this assignment, I came in the form of making it so the player would have to drag cards into a zone. said card would then be flipped to see if they matched.
-//said code broke the oringal onclick cards to only show the game's titles. I fixed this by adding in card front and back in the css folder to make the cards appear in the menu. 
-//In the future If I were to work on this assigment I would implemented a Time limit mechanic or simplified the project using 3 or 4 cards that drag into a zone like what was shown in the dragging card example we did in week 10. 
+// However I struggled alot trying to get the .png cards to duplicated as when I tried running the game, I kept getting an error of "Undefinied.png" being used for 3/4 of the array for cards.
+// I orginally thought there was an issues with the images being pngs so I tried jpgs. But still the issue persisted. It was finally found out by changing the '' for the to "" comma for the function to print all the cards as normal.
+//when implementing the drag interact for this assignment, It came in the form of making it so the player would have to drag cards into a zone. said card would then be flipped to see if they matched.
+//Said code broke the original onclick cards and only showed the game's text titles. I fixed this by adding in card front and back in the css folder to make the cards appear in the menu. 
+//In the future If I were to work on this assigment. I would implemented a Time limit mechanic or simplified the project using 3 or 4 cards that drag into a zone like what was shown in the dragging card example we did in week 10. 
 
 // make the game board 
 function createBoard() {
