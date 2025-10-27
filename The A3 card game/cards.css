@@ -1,5 +1,6 @@
 
-/* this page is to */
+/* Body is the game's main page. The 
+In the future this could be fixed by */
 body {
  padding: 0;
  margin: 0;
@@ -48,7 +49,7 @@ h3{
     transition: transform 0.6 ease;
     cursor: pointer;
 }
-
+/* The flipped card, front and back is so main.js can recongise the game card's could be flipped properly */
 .flipped .card-inner {
     transform: rotateY(180deg);
 }
@@ -79,6 +80,7 @@ h3{
 
 }
 
+/* dropzone being white serves it function as a UI the player could see. But the white color meshes with the game's cards making them hard to see*/
 .drop-zone {
     width: 700px;
     min-height: 150px;
