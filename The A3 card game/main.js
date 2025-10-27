@@ -2,7 +2,7 @@ const result = document.getElementById("result");
 const grid = document.querySelector(".cards");
 const dropZone = document.querySelector(".drop-zone");
 
-
+//keeping these variables blank allows the functions to be called in the code below
 let match = [];
 let droppedCards = [];
 
@@ -11,9 +11,11 @@ cardArray.sort(() => 0.5 - Math.random());
 result.innerHTML = 0;
 
 // make a game board 
-//the 
-//I struggled alot trying to get the .png cards to duplciate as when I tried running the game I kept getting an error of Undefinied.png being used for 3/4 of the array for cards.
+//the card game followed the typically template 
+// This involved 
+// I struggled alot trying to get the .png cards to duplciate as when I tried running the game I kept getting an error of Undefinied.png being used for 3/4 of the array for cards.
 // I orginally thought it was an issues of the images being pngs so I tried jpegs. But still the issue persisted. It was finally found out by changing the '' for the to "" comma for the function to print all the cards as normal.
+//when implementing the the on drag 
 function createBoard() {
     for(let i =0; i< cardArray.length; i++){
         const card = document.createElement("div");
@@ -54,12 +56,12 @@ function dragEnd(){
     this.classList.remove("dragging");
 }
 
-// dragging zone events
+// dragging zone codes
 dropZone.addEventListener("dragover", (e) => {
     e.preventDefault();
     dropZone.classList.add("dragover");
 });
-
+//this drag leave is so it can drag and drop
 dropZone.addEventListener("dragleave", () =>{
     dropZone.classList.remove("dragover");
 
@@ -74,7 +76,7 @@ const cardId = e.dataTransfer.getData("text/plain");
 const cardData = cardArray[cardId];
 const cardEl = document.querySelector(`[data-id='${cardId}']`);
 
-// flip and moving the card into the drop zone
+// This is so when the card is in the drop zone it can be flipped
 flipCard(cardEl, true);
 dropZone.appendChild(cardEl);
 droppedCards.push({cardEl, cardData, cardId});
