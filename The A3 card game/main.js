@@ -17,6 +17,7 @@ result.innerHTML = 0;
 // I orginally thought it was an issues of the images being pngs so I tried jpegs. But still the issue persisted. It was finally found out by changing the '' for the to "" comma for the function to print all the cards as normal.
 //when implementing the drag interact for this assignment, I came in the form of having to code 
 //said code broke the oringal onclick cards to just show the titles. I fixed this by adding in card front and back in the css folder. 
+//In the future If I were to work on this assigment I would implemented a Time limit mechanic or simplified the project using 3 or 4 cards that drag into a zone like what was shown in the card examples we did in week 10. 
 
 // make a game board 
 function createBoard() {
@@ -106,7 +107,7 @@ function checkMatch() {
         result.innerHTML = match.length;
 
     // disable dragging the matched cards
-    //the dragable functions over ridded the original on click function, making it so         
+    //the dragable functions over ridded the original on click function, making it so "draggable" and "false" had to be used inside of an onclick code.         
         first.cardEl.setAttribute("draggable", "false");
         second.cardEl.setAttribute("draggable", "false");
         first.cardEl.style.opacity = "0.7";
