@@ -1,7 +1,7 @@
 
-/* Body is the game's main page. The black and white are striking colors for the menu and 
-In the future I would use the colour black for an interactable main menu like what was shown on Rohit's card game example.
-While utalising light grey for the games background*/
+/* Body is the game's page. The black and white are striking colors for the menu, making it easy to show the smaller cards.
+In the future I would make an interactable main like what was shown on Rohit's card game example. This menu would use the colour black. 
+I plan to have light grey for the game's background and keeping white for the text and title.*/
 body {
  padding: 0;
  margin: 0;

@@ -9,6 +9,7 @@ let droppedCards = [];
 cardArray.sort(() => 0.5 - Math.random());
 result.innerHTML = 0;
 
+// make a game board 
 function createBoard() {
     for(let i =0; i< cardArray.length; i++){
         const card = document.createElement("div");
@@ -39,6 +40,7 @@ grid.appendChild(card);
     }
 }
 
+// this is so the card can be dragged
 function dragStart(e){
     e.dataTransfer.setData("text/plain", this.getAttribute("data-id"));
     this.classList.add("dragging");
@@ -84,7 +86,7 @@ function flipCard(cardEl, showFront) {
     else cardEl.classList.remove("flipped");
 }
 
-// this is to check if the images match if not it will return to the page
+// this is to check if the images match if not it will return to the main board
 function checkMatch() {
     const [first, second] = droppedCards;
     if (!first || !second) return;
@@ -102,7 +104,7 @@ function checkMatch() {
     } else{
         alert("Try again")
 
-        //flip back and return to the grid
+        //flip back and return to the board
         flipCard(first.cardEl, false);
         flipCard(second.cardEl, false);
        grid.appendChild(first.cardEl);
@@ -111,6 +113,7 @@ function checkMatch() {
     
     droppedCards = [];
 
+    // this will create a Congratulation text pop when the game ends
     if(match.length === cardArray.length /2){
         grid.textContent = "Congratulations"
     }
