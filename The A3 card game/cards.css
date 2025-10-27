@@ -1,6 +1,7 @@
 
-/* Body is the game's main page. The 
-In the future this could be fixed by */
+/* Body is the game's main page. The black and white are striking colors for the menu and 
+In the future I would use the colour black for an interactable main menu like what was shown on Rohit's card game example.
+While utalising light grey for the games background*/
 body {
  padding: 0;
  margin: 0;
@@ -49,7 +50,7 @@ h3{
     transition: transform 0.6 ease;
     cursor: pointer;
 }
-/* The flipped card, front and back is so main.js can recongise the game card's could be flipped properly */
+/* The flipped card front and back is so the main.js can recongise the game card's could be flipped properly */
 .flipped .card-inner {
     transform: rotateY(180deg);
 }
