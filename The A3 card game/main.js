@@ -10,13 +10,15 @@ let droppedCards = [];
 cardArray.sort(() => 0.5 - Math.random());
 result.innerHTML = 0;
 
-// make a game board 
-//the card game followed the typically template 
+
+//When trying my concept of dragging card game into reality I followed a tutorial to make a on click matching card game. 
 // This involved 
-// 
-// I struggled alot trying to get the .png cards to duplciate as when I tried running the game I kept getting an error of Undefinied.png being used for 3/4 of the array for cards.
+// this is 
+// I struggled alot trying to get the .png cards to duplicated as when I tried running the game I kept getting an error of Undefinied.png being used for 3/4 of the array for cards.
 // I orginally thought it was an issues of the images being pngs so I tried jpegs. But still the issue persisted. It was finally found out by changing the '' for the to "" comma for the function to print all the cards as normal.
-//when implementing the the on drag 
+//when implementing the drag interact for this assignment, I came in the form of having
+
+// make a game board 
 function createBoard() {
     for(let i =0; i< cardArray.length; i++){
         const card = document.createElement("div");
