@@ -6,10 +6,14 @@ const dropZone = document.querySelector(".drop-zone");
 let match = [];
 let droppedCards = [];
 
+//this math.random is so the cards are randomily displaced on the board and not directly next to each other.
 cardArray.sort(() => 0.5 - Math.random());
 result.innerHTML = 0;
 
 // make a game board 
+//the 
+//I struggled alot trying to get the .png cards to duplciate as when I tried running the game I kept getting an error of Undefinied.png being used for 3/4 of the array for cards.
+// I orginally thought it was an issues of the images being pngs so I tried jpegs. But still the issue persisted. It was finally found out by changing the '' for the to "" comma for the function to print all the cards as normal.
 function createBoard() {
     for(let i =0; i< cardArray.length; i++){
         const card = document.createElement("div");
@@ -33,7 +37,7 @@ function createBoard() {
         cardInner.appendChild(cardBack);
         card.appendChild(cardInner);
 
-//make a drag event
+//make a drag event with dragging and dropping the assets
 card.addEventListener("dragstart", dragStart);
 card.addEventListener("dragend", dragEnd);
 grid.appendChild(card);
@@ -96,7 +100,8 @@ function checkMatch() {
         match.push([first, second]);
         result.innerHTML = match.length;
 
-    // disable dragging the matched cards        
+    // disable dragging the matched cards
+    //the dragable functions over ridded the original on click function, making it so         
         first.cardEl.setAttribute("draggable", "false");
         second.cardEl.setAttribute("draggable", "false");
         first.cardEl.style.opacity = "0.7";
