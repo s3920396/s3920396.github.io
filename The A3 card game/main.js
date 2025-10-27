@@ -10,13 +10,13 @@ let droppedCards = [];
 cardArray.sort(() => 0.5 - Math.random());
 result.innerHTML = 0;
 
-
-//When trying my concept of dragging card game into reality I followed a tutorial to make a on click matching card game. 
-// This involved 
-// this is 
+//My inital concept for my game is to make a card game, where the player dragged matching cards into a zone within a certain time limit and 
+//When trying my concept of dragging card game into reality I followed a tutorial to make an on click matching card game. To get a template to make the 
+//
 // I struggled alot trying to get the .png cards to duplicated as when I tried running the game I kept getting an error of Undefinied.png being used for 3/4 of the array for cards.
 // I orginally thought it was an issues of the images being pngs so I tried jpegs. But still the issue persisted. It was finally found out by changing the '' for the to "" comma for the function to print all the cards as normal.
-//when implementing the drag interact for this assignment, I came in the form of having
+//when implementing the drag interact for this assignment, I came in the form of having to code 
+//said code broke the oringal onclick cards to just show the titles. I fixed this by adding in card front and back in the css folder. 
 
 // make a game board 
 function createBoard() {
